@@ -23,7 +23,7 @@ const RELEASES = [
     channel: "beta",
     date: "2026-10-01",
     file: "CODEXPlatform-8.1.0publicbeta2.pkg",
-    size: null,
+    size: 58388003,
     macOS: "macOS 27 Golden Gate / macOS 27 Tahoe / macOS 15 Sequoia",
     macfuse: true,
     latest: true,
@@ -40,7 +40,7 @@ const RELEASES = [
     channel: "stable",
     date: "2026-09-16",
     file: "CODEXPlatform-8.0.1.pkg",
-    size: null,
+    size: 60285793,
     macOS: "macOS 26 Tahoe / macOS 15 Sequoia / macOS 14 Sonoma",
     macfuse: false,
     notes: [
