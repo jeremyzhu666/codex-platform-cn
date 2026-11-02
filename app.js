@@ -26,7 +26,7 @@ function renderLatest() {
   const card = document.getElementById("latest-card");
   const sizeLabel = latest.size ? ` · ${fmtSize(latest.size)}` : "";
   const macfuseBtn = latest.macfuse
-    ? `<a class="btn btn-secondary" href="${macfuseUrl()}" download>⬇ macFUSE ${SITE.macfuse.version}</a>`
+    ? `<a class="btn btn-secondary" href="${macfuseUrl()}" download>下载 macFUSE ${SITE.macfuse.version}</a>`
     : "";
   card.innerHTML = `
     <div class="ver-row">
@@ -39,7 +39,7 @@ function renderLatest() {
       <span>${latest.macOS}</span>${sizeLabel}
     </div>
     <a class="btn" href="${downloadUrl(latest)}" download>
-      ⬇ 下载最新版
+      下载最新版
     </a>
     ${macfuseBtn}
     <a class="btn btn-secondary" href="#releases">历史版本</a>
@@ -67,7 +67,7 @@ function renderReleases() {
             ${r.notes.map((n) => `<li>${n}</li>`).join("")}
           </ul>
           <div class="release-actions">
-            <a class="btn" href="${downloadUrl(r)}" download>⬇ 下载</a>
+            <a class="btn" href="${downloadUrl(r)}" download>下载</a>
           </div>
         </div>
       </div>
