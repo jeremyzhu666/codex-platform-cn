@@ -42,7 +42,6 @@ function renderLatest() {
       下载最新版
     </a>
     ${macfuseBtn}
-    <a class="btn btn-secondary" href="#releases">历史版本</a>
   `;
 }
 
