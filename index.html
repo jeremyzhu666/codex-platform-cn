@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODEX Platform 中文网</title>
+  <meta name="description" content="CODEX Platform（原 Device Manager）中文网：软件下载、安装指引、版本历史与 macOS 兼容性一览。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-mark">◆</span> CODEX Platform <span class="brand-thin">中文网</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#download">下载</a>
+        <a href="#features">功能</a>
+        <a href="#install">安装</a>
+        <a href="#releases">历史版本</a>
+        <a href="#compat">系统兼容</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Hero / 最新版下载 ============ -->
+    <section class="hero" id="download">
+      <div class="badge" id="mirror-badge"></div>
+      <h1>下载 CODEX Platform</h1>
+      <p class="subtitle" id="tagline"></p>
+      <div class="latest-card" id="latest-card"><!-- JS 渲染 --></div>
+      <p class="alt-links">
+        也可以：<a id="link-stable" href="#releases">下载稳定版 8.0.1</a> ·
+        <a id="link-macfuse" href="#" target="_blank" rel="noopener">下载 macFUSE（8.1+ 必需）</a> ·
+        <a id="link-official" href="#" target="_blank" rel="noopener">官方下载页</a>
+      </p>
+    </section>
+
+    <!-- ============ 功能 ============ -->
+    <section id="features">
+      <p class="eyebrow">功能</p>
+      <h2>核心功能：ARRI 无损压缩技术（HDE）</h2>
+      <div class="feature-hero">
+        <p class="feature-lead">为 ARRIRAW 素材开启 High Density Encoding，在视觉无损的前提下大幅缩小文件体积—— offload 更快、占盘更少、网速更省。</p>
+        <ul class="feature-points">
+          <li><strong>8.0 起，所有 ALEXA 机型</strong>均支持直接输出 MXF/HDE</li>
+          <li>Capture Drive 可同时挂载 <strong>MXF/HDE 与 MXF/ARRIRAW</strong> 两种视图，直接兼容 Silverstack 等 DIT 工具链</li>
+          <li>7.5.1 起，ALEXA Mini / AMIRA 通过<strong>任意 CFast 2.0 读卡器</strong>即可输出 MXF/HDE，无需许可证</li>
+          <li>所有 CODEX 读卡器配合 CODEX Platform，均可为 ARRIRAW 素材开启 HDE</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 安装步骤 ============ -->
+    <section id="install">
+      <p class="eyebrow">安装</p>
+      <h2>装好之后，四步跑通</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>运行安装器</h3>
+          <p>打开下载的 <code>.pkg</code>，跟随向导完成安装，默认会选中所有未安装的组件。安装结束后如未提示重启，请手动重启一次。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>授予完全磁盘访问</h3>
+          <p>系统设置 → 隐私与安全性 → 完全磁盘访问，打开 <strong>Codex Platform</strong>。（7.6.2 及更早版本请找 <strong>drserver</strong>）</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>安装 macFUSE</h3>
+          <p>8.1 起需单独安装 macFUSE（建议 5.3.3 及以上），装完允许系统扩展并重启。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>启动</h3>
+          <p>应用程序 → Codex 文件夹 → 双击 <strong>Codex Platform</strong>，菜单栏出现齿轮图标即表示运行成功，之后每次登录自动启动。</p>
+        </div>
+      </div>
+      <p class="callout">⚠️ 使用 macOS 26 Tahoe 的话：26.1 / 26.2 的完全磁盘访问列表存在显示问题，请升级到 <strong>26.3 及以上</strong>。</p>
+    </section>
+
+    <!-- ============ 历史版本 ============ -->
+    <section id="releases">
+      <p class="eyebrow">版本</p>
+      <h2>所有版本</h2>
+      <div class="release-list" id="release-list"><!-- JS 渲染 --></div>
+    </section>
+
+    <!-- ============ 兼容矩阵 ============ -->
+    <section id="compat">
+      <p class="eyebrow">兼容性</p>
+      <h2>你的 macOS 该装哪个版本</h2>
+      <table class="compat-table">
+        <thead>
+          <tr><th>macOS 版本</th><th>最新可用</th><th>最低要求</th></tr>
+        </thead>
+        <tbody id="compat-body"><!-- JS 渲染 --></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>CODEX Platform 中文信息站 — 最新版本下载、中文安装指引与兼容性速查，安装包同步自官方发布渠道。</p>
+    <p>系统要求：Apple Mac · 约 130MB 磁盘空间 · CODEX 媒体读卡器。仅支持 macOS，无 Windows 版本。</p>
+    <p class="footer-fine">内容更新于 <span id="updated"></span> · 版本信息来自 CODEX 官方 Release Notes · CODEX, CaptureDrive, CompactDrive and TransferDrive are trademarks of CODEX Tech Limited.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
