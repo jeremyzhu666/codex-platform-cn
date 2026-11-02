@@ -136,6 +136,9 @@ h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
 .latest-card .channel {
   font-size: 12px;
   font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
   padding: 4px 12px;
   border-radius: 999px;
   text-transform: uppercase;
@@ -315,6 +318,9 @@ h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
 .macfuse-tag {
   font-size: 12px;
   font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
   color: var(--lavender);
   background: rgba(157, 139, 255, 0.1);
   border: 1px solid rgba(157, 139, 255, 0.3);

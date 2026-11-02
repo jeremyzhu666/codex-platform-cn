@@ -10,7 +10,7 @@
 const SITE = {
   product: "CODEX Platform",
   tagline: "CODEX 存储介质管理软件",
-  macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg", url: "/files/macfuse-5.3.3.dmg" },
+  macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg", url: "/files/macfuse-5.3.3.dmg", pan: "https://pan.baidu.com/s/1fgA9hkM8CoqFOg5b_MLz3g?pwd=t5xx" },
   mirrorBase: "/files/",
   updated: "2026-11-02",
 };

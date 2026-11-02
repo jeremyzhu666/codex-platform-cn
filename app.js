@@ -26,7 +26,7 @@ function renderLatest() {
   const card = document.getElementById("latest-card");
   const sizeLabel = latest.size ? ` · ${fmtSize(latest.size)}` : "";
   const macfuseBtn = latest.macfuse
-    ? `<a class="btn btn-secondary" href="${macfuseUrl()}" download>下载 macFUSE ${SITE.macfuse.version}</a>`
+    ? `<a class="btn btn-secondary" href="${SITE.macfuse.pan || macfuseUrl()}" ${SITE.macfuse.pan ? 'target="_blank" rel="noopener"' : "download"}>下载 macFUSE ${SITE.macfuse.version}</a>`
     : "";
   card.innerHTML = `
     <div class="ver-row">
