@@ -10,7 +10,7 @@
 const SITE = {
   product: "CODEX Platform",
   tagline: "CODEX 存储介质管理软件",
-  macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg" },
+  macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg", url: "/files/macfuse-5.3.3.dmg" },
   mirrorBase: "/files/",
   updated: "2026-11-02",
 };
@@ -22,6 +22,7 @@ const RELEASES = [
     channel: "beta",
     date: "2026-10-01",
     file: "CodexPlatform-8.1.0publicbeta2-06803.pkg",
+    url: "//tnvl5cvb0.hn-bkt.clouddn.com/CodexPlatform-8.1.0publicbeta2-06803.pkg",
     size: 58388003,
     macOS: "macOS 27 Golden Gate / macOS 26 Tahoe",
     macfuse: true,
@@ -39,6 +40,7 @@ const RELEASES = [
     channel: "stable",
     date: "2026-09-16",
     file: "CodexPlatform-8.0.1-06789.pkg",
+    url: "//tnvl5cvb0.hn-bkt.clouddn.com/CodexPlatform-8.0.1-06789.pkg",
     size: 60285793,
     macOS: "macOS 26 Tahoe / macOS 15 Sequoia / macOS 14 Sonoma",
     macfuse: false,

@@ -3,11 +3,11 @@
 const CHANNEL_LABEL = { beta: "测试版", stable: "稳定版", legacy: "历史版本" };
 
 function downloadUrl(release) {
-  return SITE.mirrorBase + release.file;
+  return release.url || SITE.mirrorBase + release.file;
 }
 
 function macfuseUrl() {
-  return SITE.mirrorBase + SITE.macfuse.file;
+  return SITE.macfuse.url || SITE.mirrorBase + SITE.macfuse.file;
 }
 
 function fmtSize(bytes) {
