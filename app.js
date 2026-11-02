@@ -49,7 +49,7 @@ function renderLatest() {
       <span>${latest.macOS}</span>${sizeLabel}
     </div>
     <a class="btn" href="${downloadUrl(latest)}" download>
-      ⬇ 下载 for macOS
+      ⬇ 下载最新版
     </a>
     ${macfuseBtn}
     <a class="btn btn-secondary" href="#releases">历史版本</a>

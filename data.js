@@ -10,7 +10,7 @@
 const SITE = {
   product: "CODEX Platform",
   tagline: "CODEX 存储介质管理软件 · 中文站",
-  mirrorBadge: "中文站 · 版本与官网同步",
+  mirrorBadge: "中文站",
   macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg" },
   mirrorBase: "/files/",
   updated: "2026-11-02",
@@ -24,7 +24,7 @@ const RELEASES = [
     date: "2026-10-01",
     file: "CODEXPlatform-8.1.0publicbeta2.pkg",
     size: 58388003,
-    macOS: "macOS 27 Golden Gate / macOS 27 Tahoe / macOS 15 Sequoia",
+    macOS: "macOS 27 Golden Gate / macOS 26 Tahoe",
     macfuse: true,
     latest: true,
     notes: [
@@ -54,7 +54,6 @@ const RELEASES = [
     channel: "legacy",
     date: "2026-06-11",
     file: "CODEXPlatform-8.0.0.pkg",
-    size: null,
     macOS: "macOS 26 Tahoe / macOS 15 Sequoia / macOS 14 Sonoma",
     macfuse: false,
     notes: [
