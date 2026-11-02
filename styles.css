@@ -330,6 +330,7 @@ h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
   margin-left: 8px;
   white-space: nowrap;
 }
+.latest-card .macfuse-tag { margin-left: 0; }
 
 /* ============ 兼容矩阵 ============ */
 .compat-table {
