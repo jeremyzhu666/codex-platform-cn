@@ -9,8 +9,7 @@
 
 const SITE = {
   product: "CODEX Platform",
-  tagline: "CODEX 存储介质管理软件 · 中文站",
-  mirrorBadge: "中文站",
+  tagline: "CODEX 存储介质管理软件",
   macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg" },
   mirrorBase: "/files/",
   updated: "2026-11-02",

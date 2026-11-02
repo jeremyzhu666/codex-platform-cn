@@ -19,19 +19,9 @@ function fmtSize(bytes) {
 /* ---------- Hero 最新版卡片 ---------- */
 function renderLatest() {
   const latest = RELEASES.find((r) => r.latest) || RELEASES[0];
-  const stable = RELEASES.find((r) => r.channel === "stable");
 
-  document.getElementById("mirror-badge").textContent = SITE.mirrorBadge;
   document.getElementById("tagline").textContent = SITE.tagline;
   document.getElementById("updated").textContent = SITE.updated;
-
-  const stableLink = document.getElementById("link-stable");
-  if (stable && stable !== latest) {
-    stableLink.textContent = `下载稳定版 ${stable.version}`;
-    stableLink.href = downloadUrl(stable);
-  } else {
-    stableLink.parentElement.style.display = "none";
-  }
 
   const card = document.getElementById("latest-card");
   const sizeLabel = latest.size ? ` · ${fmtSize(latest.size)}` : "";
