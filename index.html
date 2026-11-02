@@ -15,8 +15,8 @@
       </div>
       <nav class="nav-links">
         <a href="#download">下载</a>
-        <a href="#features">功能</a>
         <a href="#install">安装</a>
+        <a href="#features">功能</a>
         <a href="#releases">历史版本</a>
         <a href="#compat">系统兼容</a>
       </nav>
@@ -35,6 +35,35 @@
       </p>
     </section>
 
+    <!-- ============ 安装步骤 ============ -->
+    <section id="install">
+      <p class="eyebrow">安装</p>
+      <h2>两个安装包，按这个顺序装</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>先装 CODEX Platform</h3>
+          <p>打开下载的 <code>.pkg</code>，跟随向导完成安装，默认会选中所有未安装的组件。安装结束后如未提示重启，请手动重启一次。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>授予完全磁盘访问</h3>
+          <p>系统设置 → 隐私与安全性 → 完全磁盘访问，打开 <strong>Codex Platform</strong>。（7.6.2 及更早版本请找 <strong>drserver</strong>）</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>再装 macFUSE（8.1+）</h3>
+          <p>运行 <code>macfuse-5.3.3.dmg</code> 里的 Install macFUSE，装完在隐私与安全性中允许系统扩展，然后重启。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>启动</h3>
+          <p>应用程序 → Codex 文件夹 → 双击 <strong>Codex Platform</strong>，菜单栏出现齿轮图标即表示运行成功，之后每次登录自动启动。</p>
+        </div>
+      </div>
+      <p class="callout">⚠️ 使用 macOS 26 Tahoe 的话：26.1 / 26.2 的完全磁盘访问列表存在显示问题，请升级到 <strong>26.3 及以上</strong>。</p>
+    </section>
+
     <!-- ============ 功能 ============ -->
     <section id="features">
       <p class="eyebrow">功能</p>
@@ -48,35 +77,6 @@
           <li>所有 CODEX 读卡器配合 CODEX Platform，均可为 ARRIRAW 素材开启 HDE</li>
         </ul>
       </div>
-    </section>
-
-    <!-- ============ 安装步骤 ============ -->
-    <section id="install">
-      <p class="eyebrow">安装</p>
-      <h2>装好之后，四步跑通</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>运行安装器</h3>
-          <p>打开下载的 <code>.pkg</code>，跟随向导完成安装，默认会选中所有未安装的组件。安装结束后如未提示重启，请手动重启一次。</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>授予完全磁盘访问</h3>
-          <p>系统设置 → 隐私与安全性 → 完全磁盘访问，打开 <strong>Codex Platform</strong>。（7.6.2 及更早版本请找 <strong>drserver</strong>）</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>安装 macFUSE</h3>
-          <p>8.1 起需单独安装 macFUSE（建议 5.3.3 及以上），装完允许系统扩展并重启。</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>启动</h3>
-          <p>应用程序 → Codex 文件夹 → 双击 <strong>Codex Platform</strong>，菜单栏出现齿轮图标即表示运行成功，之后每次登录自动启动。</p>
-        </div>
-      </div>
-      <p class="callout">⚠️ 使用 macOS 26 Tahoe 的话：26.1 / 26.2 的完全磁盘访问列表存在显示问题，请升级到 <strong>26.3 及以上</strong>。</p>
     </section>
 
     <!-- ============ 历史版本 ============ -->
