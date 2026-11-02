@@ -3,7 +3,11 @@
 const CHANNEL_LABEL = { beta: "测试版", stable: "稳定版", legacy: "历史版本" };
 
 function downloadUrl(release) {
-  return release.file ? SITE.mirrorBase + release.file : SITE.officialLegacy;
+  return SITE.mirrorBase + release.file;
+}
+
+function macfuseUrl() {
+  return SITE.mirrorBase + SITE.macfuse.file;
 }
 
 function fmtSize(bytes) {
@@ -20,20 +24,20 @@ function renderLatest() {
   document.getElementById("mirror-badge").textContent = SITE.mirrorBadge;
   document.getElementById("tagline").textContent = SITE.tagline;
   document.getElementById("updated").textContent = SITE.updated;
-  document.getElementById("link-official").href = SITE.officialDownloads;
-  document.getElementById("link-macfuse").href = SITE.macfuseUrl;
 
   const stableLink = document.getElementById("link-stable");
   if (stable && stable !== latest) {
     stableLink.textContent = `下载稳定版 ${stable.version}`;
     stableLink.href = downloadUrl(stable);
-    if (!stable.file) stableLink.target = "_blank";
   } else {
     stableLink.parentElement.style.display = "none";
   }
 
   const card = document.getElementById("latest-card");
   const sizeLabel = latest.size ? ` · ${fmtSize(latest.size)}` : "";
+  const macfuseBtn = latest.macfuse
+    ? `<a class="btn btn-secondary" href="${macfuseUrl()}" download>⬇ macFUSE ${SITE.macfuse.version}</a>`
+    : "";
   card.innerHTML = `
     <div class="ver-row">
       <span class="ver">${latest.version}</span>
@@ -44,10 +48,11 @@ function renderLatest() {
       <span>发布于 ${latest.date}</span>
       <span>${latest.macOS}</span>${sizeLabel}
     </div>
-    <a class="btn" href="${downloadUrl(latest)}" ${latest.file ? 'download' : 'target="_blank" rel="noopener"'}>
+    <a class="btn" href="${downloadUrl(latest)}" download>
       ⬇ 下载 for macOS
     </a>
-    <a class="btn btn-secondary" href="#releases">查看历史版本</a>
+    ${macfuseBtn}
+    <a class="btn btn-secondary" href="#releases">历史版本</a>
   `;
 }
 
@@ -72,9 +77,7 @@ function renderReleases() {
             ${r.notes.map((n) => `<li>${n}</li>`).join("")}
           </ul>
           <div class="release-actions">
-            <a class="btn" href="${downloadUrl(r)}" ${r.file ? 'download' : 'target="_blank" rel="noopener"'}>
-              ${r.file ? "⬇ 下载" : "前往官方 Legacy 页"}
-            </a>
+            <a class="btn" href="${downloadUrl(r)}" download>⬇ 下载</a>
           </div>
         </div>
       </div>

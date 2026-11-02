@@ -1,19 +1,17 @@
 /* ============================================================
  * 站点配置 —— 改这里就能维护本站，不用动页面代码
  * ============================================================
- * mirrorBase: 安装包的镜像前缀。
- *   - 默认为本站 /files/ 目录：把下载好的 .pkg 放进项目 files/ 文件夹即可
+ * mirrorBase: 安装包的托管前缀。
+ *   - 默认为本站 /files/ 目录：把下载好的安装包放进项目 files/ 文件夹即可
  *   - 上了 OSS/CDN 后改成绝对地址，如 https://mirrors.example.com/codex/
- * file 为 null 的版本会跳转到官方 Legacy 页面（表示本站未托管该安装包）
+ * macfuse: 与 8.1+ 配套提供的 macFUSE 安装包（.dmg）
  * ============================================================ */
 
 const SITE = {
   product: "CODEX Platform",
   tagline: "CODEX 存储介质管理软件 · 中文站",
   mirrorBadge: "中文站 · 版本与官网同步",
-  officialDownloads: "https://help.codex.online/content/downloads/software",
-  officialLegacy: "https://help.codex.online/content/downloads/legacy",
-  macfuseUrl: "https://macfuse.github.io/",
+  macfuse: { version: "5.3.3", file: "macfuse-5.3.3.dmg" },
   mirrorBase: "/files/",
   updated: "2026-11-02",
 };
@@ -55,7 +53,8 @@ const RELEASES = [
     version: "8.0.0",
     channel: "legacy",
     date: "2026-06-11",
-    file: null,
+    file: "CODEXPlatform-8.0.0.pkg",
+    size: null,
     macOS: "macOS 26 Tahoe / macOS 15 Sequoia / macOS 14 Sonoma",
     macfuse: false,
     notes: [
