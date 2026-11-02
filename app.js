@@ -38,7 +38,7 @@ function renderLatest() {
       <span>发布于 ${latest.date}</span>
       <span>${latest.macOS}</span>${sizeLabel}
     </div>
-    <a class="btn" href="${downloadUrl(latest)}" download>
+    <a class="btn" href="${latest.pan || downloadUrl(latest)}" ${latest.pan ? 'target="_blank" rel="noopener"' : "download"}>
       下载最新版
     </a>
     ${macfuseBtn}
@@ -67,7 +67,7 @@ function renderReleases() {
             ${r.notes.map((n) => `<li>${n}</li>`).join("")}
           </ul>
           <div class="release-actions">
-            <a class="btn" href="${downloadUrl(r)}" download>下载</a>
+            <a class="btn" href="${r.pan || downloadUrl(r)}" ${r.pan ? 'target="_blank" rel="noopener"' : "download"}>下载</a>
           </div>
         </div>
       </div>

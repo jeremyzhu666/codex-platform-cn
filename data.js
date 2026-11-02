@@ -15,7 +15,8 @@ const SITE = {
   updated: "2026-11-02",
 };
 
-/* channel: beta = 测试版 | stable = 稳定版 | legacy = 历史版本 */
+/* channel: beta = 测试版 | stable = 稳定版 | legacy = 历史版本
+ * url: 直链地址（可选）；pan: 百度网盘分享链接（可选，优先于 url） */
 const RELEASES = [
   {
     version: "8.1.0 public beta 2",
@@ -23,6 +24,7 @@ const RELEASES = [
     date: "2026-10-01",
     file: "CodexPlatform-8.1.0publicbeta2-06803.pkg",
     url: "//tnvl5cvb0.hn-bkt.clouddn.com/CodexPlatform-8.1.0publicbeta2-06803.pkg",
+    pan: "https://pan.baidu.com/s/1-Ye-05i1l3NHf0Liue7oew?pwd=kmnd",
     size: 58388003,
     macOS: "macOS 27 Golden Gate / macOS 26 Tahoe",
     macfuse: true,
